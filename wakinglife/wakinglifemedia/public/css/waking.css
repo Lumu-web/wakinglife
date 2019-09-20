@@ -1,0 +1,281 @@
+@font-face {
+  font-family: 'Frente';
+  src: url('fonts/frenteh1-regular.eot'); /* IE9 Compat Modes */
+  src: url('fonts/frenteh1-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       /*url('fonts/frenteh1-regular.woff2') format('woff2'),  Super Modern Browsers */
+       url('fonts/frenteh1-regular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/frenteh1-regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('fonts/frenteh1-regular.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+body, html {
+	width:100%;
+	height:100%;
+	margin:0;
+	padding:0;
+	overflow-x:hidden;
+	font-family:Arial;
+	background: url(../images/bg.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+}
+
+#topnav_white_layer
+{
+	position: fixed;
+	width:900px;
+	top:0;
+     right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    /* give it dimensions */
+  /* bring your own prefixes */
+   
+
+	height:auto;
+	background-color:rgb(255,255,255);
+	padding-left:10px;
+	padding-right:10px;
+	padding-bottom:10px;
+	text-align:center;
+}
+
+
+
+#topnav_menu
+{
+	background-color:#000000;
+	color:white;
+	margin:auto;
+	height:auto;
+	text-align:left;
+	
+	
+}
+#topnav_menu ul
+{
+	width:auto;
+	
+	height:auto;
+}
+#topnav_menu li
+{
+	
+	margin:3%;
+	color:white;
+	font-family:Utsaah;
+	display:inline;
+	font-size:1.7em;
+	text-align:center;
+}
+
+
+body {
+
+}
+
+a {
+	text-decoration:none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin:0;
+	padding:0;
+}
+
+.float {
+	display:inline-block;
+	vertical-align:top;
+}
+
+article {
+	width:100%;
+	padding:50px 0 50px 0;
+	text-align:center;
+	
+}
+
+article section {
+	width:100%;
+	margin:auto;
+}
+
+#home {
+	padding:20px 0 20px 0;
+	text-align:center;
+}
+
+#home #logo_container {
+	width:300px;
+	height:300px;
+	margin:auto;
+	border:10px solid rgba(255, 255, 255, 1);
+	border-radius:50%;
+	background-image: url(../images/logo.png);
+}
+
+#home h1 {
+	font-size:4em;
+	font-family:Frente;
+	margin:40px 0 0 0;
+	color:#fff;
+}
+
+#home hr {
+	width:250px;
+	border:1px solid #fff;
+}
+
+#home #mag_lnk {
+	display:block;
+	width:150px;
+	margin:50px auto;
+	padding:15px;
+	border:2px dashed #2b8efd;
+	color:#fff;
+}
+
+.articles {
+	padding:100px 0 50px 0;
+	text-align:left;
+	width:100%;
+}
+
+.articles a {
+	display:inline-block;
+	vertical-align:top;
+	color:#fff;
+	/*background-color:rgba(0, 0, 0, 0.5);*/
+	width:100%;
+	min-height:250px;
+	padding:0;
+	margin:0;
+}
+
+.articles #music_articles_container {
+	width:100%;
+	margin:auto;
+}
+
+.article {
+	width:100%;
+	height:250px;
+	text-align:left;
+}
+
+.article p {
+	position:
+	display:block;
+	height:145px;
+	padding:10px;
+	margin:0;
+}
+
+.article span {
+	display:block;
+	padding:0 0 0 10px;
+	margin:0;
+}
+
+.article p, .article span {
+	text-shadow:1px 1px 8px #000;
+}
+
+.article hr {
+	border:1px solid #2377d5;
+}
+
+.gif_bg
+{
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+
+#music_articles_container ul
+{
+	width:100%;
+	padding-left:0;
+}
+
+#music_articles_container li
+{
+	width:33%;
+	display:inline-block;
+	padding:0;
+	margin:0;
+}
+
+footer {
+	width:100%;
+	padding:50px 0 20px 0;
+	background-color:rgba(0, 0, 0, 0.9);
+}
+
+footer #about {
+	width:900px;
+	margin:auto;
+	padding:0 0 50px 0;
+	border-bottom:1px solid #8c23d5;
+	color:#fff;
+}
+
+footer #about h2 {
+	display:block;
+	width:200px;
+	margin:auto;
+	font-family:Frente;
+	font-size:3em;
+	text-align:center;
+}
+
+footer #about p {
+	text-align:left;
+}
+
+footer #sm {
+	width:400px;
+	margin:auto;
+	padding:20px 0 20px 0;
+	text-align:center;
+}
+
+footer #sm a {
+	display:inline-block;
+	vertical-align:top;
+	width:50px;
+	height:50px;
+	margin:20px;
+}
+
+footer #sm #facebook {
+	background-image:url(images/sm/facebook.png);
+}
+
+footer #sm #twitter {
+	background-image:url(images/sm/twitter.png);
+}
+
+footer #sm #instagram {
+	background-image:url(images/sm/instagram.png);
+}
+
+footer #sm #youtube {
+	background-image:url(images/sm/youtube.png);
+}
+
+footer #copyright {
+	width:400px;
+	margin:auto;
+	font-family:Arial;
+	font-size:0.8em;
+	color:#fff;
+	text-align:center;
+}
+
+footer #copyright a{
+	color:#fff;
+}

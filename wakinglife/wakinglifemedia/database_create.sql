@@ -1,0 +1,117 @@
+-- phpMyAdmin SQL Dump
+-- version 4.5.1
+-- http://www.phpmyadmin.net
+--
+-- Host: 127.0.0.1
+-- Generation Time: Sep 19, 2019 at 05:11 PM
+-- Server version: 10.1.16-MariaDB
+-- PHP Version: 7.1.32
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `wakinglifedb`
+--
+CREATE DATABASE IF NOT EXISTS `wakinglifedb` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `wakinglifedb`;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `category`
+--
+
+CREATE TABLE `category` (
+  `CategoryID` int(11) NOT NULL,
+  `Category` varchar(225) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `category`
+--
+
+INSERT INTO `category` (`CategoryID`, `Category`) VALUES
+(1, 'Entertainment'),
+(2, 'Magazine'),
+(3, 'Interview'),
+(4, 'Events'),
+(5, 'Music');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `posts`
+--
+
+CREATE TABLE `posts` (
+  `id` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `CategoryID` int(11) NOT NULL,
+  `image` varchar(255) NOT NULL,
+  `body` text NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `posts`
+--
+
+INSERT INTO `posts` (`id`, `title`, `CategoryID`, `image`, `body`, `created_at`, `updated_at`) VALUES
+(1, 'Warner Music Group Hosts Annual Grammy Celebration', 1, 'warner_music_group_host_annual_grammy_celebration.jpg', 'Warner Music Group rolled out the red carpet in celebration of the 57th annual Grammy Awards with special musical performances and celebrity guests.\r\n\r\n			The annual post-Grammy celebration was held in honor of the companys 2015 Grammy-nominated artists, including Beyonce, Jay Z, Kendrick Lamar, Ed Sheeran, Charli XCX, Clean Bandit, Wiz Khalifa, Trey Songz, Faith Hill, Hunter Hayes, Neil Young, Paramore, Tegan and Sara, The Black Keys, Tom Petty & The Heartbreakers, Pink Floyd, Grateful Dead, Coldplay and more.\r\n', '2019-09-18 15:37:59', '0000-00-00 00:00:00'),
+(2, 'Dineo Moeketsi - MyInsights', 3, 'my_insights_dineo_moeketsi.jpg', 'The first video segment of #MyInsights is finally here. exclusively to Waking Life Magazine. This video segment is all about hearing inspiring stories from some of your favorite celeb personals from around the country. First up - Dineo Moeketsi\r\n			\r\n			For those of you who still don''t get what #MyInsights is all about, it''s a topical video segment in which we give celebs 5 topics related to the come up, which in turn relate to the youth.\r\n\r\n			In this segment, Dineo Moeketsi sat down with us to talk about\r\n			\r\n			<b>1.</b> Humble Beginnings: She explains the struggles she went through as a young person trying to make it in the entertainment industry as a musician & actress & how it all culminated to her developing into who she is today.\r\n \r\n			<b>2.</b> Humility: Dineo speaks out on her humility, explaining how being surrounded by celebs daily has not changed the way she believes one should act in the presence of fame.</p>\r\n \r\n			<b>3.</b> Insecurities: Dineo talks to us about the many insecurities she, like a lot of young women, have & gives insight on how to handle insecurities.\r\n \r\n			<b>4.</b> South Africa: Dineo speaks out on the value of South Africa & what it means to be an entertainer in this country\r\n \r\n			<b>5.</b> Advice: Dineo gives advice on how she believes young people should approach the entertainment industry & shares her thoughts on what characteristics one should develop along the way.', '2019-09-18 15:52:35', '0000-00-00 00:00:00'),
+(3, 'Artists Profile: Ayelle', 3, 'artist_profile_ayelle.jpg', '<p>Late last month, after scouting soundcloud & youtube for talent, we caught up with London based singer/songwriter Ayelle to discuss her music, songwriting & what makes her, her.</p>\r\n \r\n			<p>After reading her story & listening to her music, we believe that you too will fall for the voice that is - Ayelle. Check out her story:</p>\r\n \r\n			<p>"Well I''ve always been writing music. Since I was young, I''ve had a love for music & a passion for it. But it wasn''t till I was about 13 or 14 that a music teacher that I had said "I think you''re really talented & I think it''s something you should really consider studying & further on".</p> \r\n \r\n			<p>But then, after a while, I moved to live with my mom in Spain & it just happened that I started to connect with producers & doing a lot of recording experience. It truly is an experience because when you walk into a studio it''s not just getting in & singing lines, you really have to know what to do with all the equipment & stuff & if you don''t have that experience you won''t know much about studio time.</p>\r\n \r\n			<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/178033534&amp;color=00aabb&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>\r\n \r\n			<p>After my time in Spain, I moved to London at the age of 18 & I started studying music at Tech Music School. It was at that moment that I really found my voice & so I started listening to what was going on on Soundcloud & started to formulate lyrics because lyrics are the reason I got into music in the first place & the lyrics I''d hear from some of my fav artist are what eventually inspired me to go further into music & that''s how everything sort of began."</p>\r\n \r\n			<p>Living in London & living in spain has truly influenced her growth as an artist on the rise. Furthermore her lyrics & sound both compliment the 2 cultures differently & bring a unique taste to the scene. Ayelle tells us more</p>\r\n \r\n			<p>"It''s been a cultural growth I suppose. As a songwriter in the London scene, I''m surrounded by all these artists & fellow songwriters who influence me in many different ways. I''d be listening to these new school RnB songs & they''d sing about different topics & not the normal stuff like ''I''m at the club, I met this guy, we went to bars'' you know? It was different.</p>\r\n \r\n			<p>But in Spain, thing is I started working in night clubs at 16 & I''d do promotional work & such, which was fun, but I found that, that culture is a very objectified culture. People see themselves & others as objects, more so sex objects. So in London, I became more aware of the difference in my growth as oppose to Spain which I didn''t particularly like. I found that I came to value my looks more than anything else & at the end of the day that gives you a really bad self confidence... So I think coming to London, made a difference because I went back to writing songs that actually meant something to me."</p>\r\n \r\n			<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/178033532&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>\r\n \r\n			<p>As you listen to Ayelle''s EP - What You Made, you''ll find that a lot of her songs are very heart felt & personal. The kind of songs that make you think about what it must be like to be in the artists shoes. Well, as she explains...</p>\r\n \r\n			<p>"A lot of people feel that ''What You Made'' is a love song which it isn''t. I mean it''s great that people are connecting to it because it''s something you can have in a relationship as well, but it''s actually about a person who had a considerable amount of influence in my life. It''s just about trying to get away from your past & the people that may have hurt you in your past which is something a lot of people experience, even in relationships as well.</p>\r\n \r\n			<p>You''re with someone for ages & find out that everything is a lie. Which is a common experience for so many people including myself so I wrote that. The 2nd song, ''Say'', is about a guy, a very special guy who is an amazing person & I wrote that song because I couldn''t tell him how I felt. So I tend to just write my best songs after an experience.</p>\r\n \r\n			<p>The final song ''Maybe, is a narrative following thoughts that I think a lot of girls have while growing up. I remember starting to wear make up at the age of 12 and thinking about how I could make myself more attractive and appealing to guys. I think we teach girls to value themselves based on looks and male affection/approval from a very early age and ''Maybe'' is a criticism and self reflection on that."</p>\r\n \r\n			<p>With a beautiful soul & such profound lyrics, it is no secret that it''s only a matter of time before she becomes who she is meant to be & that is, as we believe, is a true inspiration to women everywhere.</p>\r\n \r\n			<p>"I find that song writing is one of the tools that keeps me inspired. Creating new songs & writing new lyrics is a way to push myself & my way of reaching out to people. People who will share & like my stuff because they actually like it & not because they have to.</p>\r\n \r\n			<p>So just going to music seminars & collaborating with other artists & reaching out to others helps because there''s a lot happening & a lot going on in music. About a month or 2 ago, nothing was really happening, but I found myself just pushing & reaching out to people, so it really is just what you put in it."</p>\r\n \r\n			<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/178033531&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>\r\n \r\n			<h3>For more on Ayelle make sure to follow her on:</h3>\r\n \r\n			<p><a href="https://www.facebook.com/ayellemusic" target="_blank">Facebook: facebook.com/ayellemusic</a>\r\n			<br/><a href="https://twitter.com/ayellemusic" target="_blank">Twitter: @Ayellemusic</a></p>', '2019-09-19 16:05:32', '0000-00-00 00:00:00'),
+(4, 'Ballantine''s and Boiler Room partner to bring global underground music event to SA', 4, 'ballantines_and_boiler_room_partner.jpg', '<p>The world''s leading underground music platform, Boiler Room, is coming to South Africa. On 5 March 2015, Ballantine''s Scotch Whisky and Boiler Room will present "Stay True South Africa" - a one-night-only house music experience in Johannesburg featuring global and local legends Black Coffee, Okmalumkoolkat, Culoe de Song, Shimza and Black Motion.</p>\r\n \r\n			<p>This local event continues the global partnership between Ballantine''s, the world''s no. 2 Scotch whiskey, and Boiler Room, one of the world''s most popular and authentic online music channels. Launched in early 2014 with its first event in Mexico, this partnership saw the creation of the "Boiler Room & Ballantine''s Stay True Journeys", which explores and celebrates the stories of the world''s most vibrant music scenes. The Stay True Journeys have already travelled to three continents - and Boiler Room will be the first show of this scale in South Africa and the first time it will be broadcast live online from the country via the microsite <a href="http://www.Boilerroom.TV/StayTrue" target="_blank">www.Boilerroom.tv/StayTrue</a>.</p>\r\n \r\n			<p>Boiler Room lands on SA soil at a time when our house music (r)evolution is in the global spotlight. Pioneering producers, artists and DJ''s are touring the world taking our sound to eager international ears. The world has taken notice. The world is listening.</p>\r\n \r\n			<p>"We always thought that house was big internationally, because that''s where we got it from. But I''ve realized that we have the biggest house scene in the world in South Africa", says Black Coffee.</p>\r\n \r\n			<p>Culoe De Song adds: "There is a lot of energy, a lot of hunger, a lot of kids getting into house music. It''s our time now and it''s exciting."</p>\r\n \r\n			<p>Stay True South Africa will culminate in the production of an online documentary, shot on location in Johannesburg, that willtake our country - and the world - on a journey through South Africa''s house music, featuring global and local musicians exploring the stories and the people that create our unique music culture. The documentary will be available early April on <a href="http://www.Boilerroom.tv" target="_blank">www.Boilerroom.tv</a>.</p>\r\n \r\n			<p>"We are very excited to be involved with bringing Boiler Room to South Africa," says Daryl Dixon, Ballantine''s SA Brand Manager. "Ballantine''s is about authenticity, self-belief, staying true to yourself and leaving an impression. This fits perfectly with Boiler Room''s ethos of uncovering and showcasing genuine talent from a diverse range of music genres around the world - and now here at home too."</p>\r\n \r\n			<p>Blaise Bellville, founder of Boiler Room added: "Boiler Room and Ballantine''s partnership is all about exploring and documenting the world''s most authentic and original underground music scenes. We''ve watched the South African electronic scene explode in recent years with artists like Black Coffee, Okmalumkoolkat and Culoe De Song gaining widespread international recognition. All of this made Johannesburg, the beating heart of South Africa''s house scene, a very obvious choice for the fifth stop on our global Stay True Journey."</p>\r\n', '2019-09-19 16:12:02', '0000-00-00 00:00:00'),
+(5, 'Nasty C - Switched Up | Music Video', 5, 'NastyC.png', '<div>Every once in a while, the music gods give us an artist we can look to and say "Sh*t, this dude''s gonna be a force to reckon with." Nasty-C is one such artist. Don''t believe us? Let''s look at the facts shall we?</div><div><br></div><div>Fact: The kid''s social media following is insane! 472k+ strong collectively. Fact: He''s still under the age of 21 that means he''s best years are still ahead of him. FACT: He hasn''t made a bad song yet - we dare you to think of a bad Nasty-C song, go on... We''ll wait :)</div><div><br></div><div>The kid is something special and his song "Switched Up" is a number one waiting to happen. From the visuals to the lyrics, the boy wonder is climbing the charts and the hip hop ladder quite rapidly. Hell, even if that rumor of him possibly signing to Roc Nation is utter horse sh*t, it wouldn''t come as a surprise, if the Switch Up actually happened.</div><div><br></div><div>Check out the video below if you haven''t yet, and for those of y''all who aren''t convinced about him yet, do yourselves a favour - Switch Up&nbsp;</div><iframe width="854" height="480" src="https://www.youtube.com/embed/3ZbFo5Pp5FI" frameborder="0" allowfullscreen=""></iframe>', '2019-09-19 16:12:02', '0000-00-00 00:00:00');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `category`
+--
+ALTER TABLE `category`
+  ADD PRIMARY KEY (`CategoryID`);
+
+--
+-- Indexes for table `posts`
+--
+ALTER TABLE `posts`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `CategoryID` (`CategoryID`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `category`
+--
+ALTER TABLE `category`
+  MODIFY `CategoryID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT for table `posts`
+--
+ALTER TABLE `posts`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `posts`
+--
+ALTER TABLE `posts`
+  ADD CONSTRAINT `posts_ibfk_1` FOREIGN KEY (`CategoryID`) REFERENCES `category` (`CategoryID`);
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

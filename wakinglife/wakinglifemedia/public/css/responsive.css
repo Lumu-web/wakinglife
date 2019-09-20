@@ -1,0 +1,288 @@
+/* CSS Document */
+
+#topnav_white_layer
+{
+	position: fixed;
+	width:90%;
+	top:0;
+     z-index:19;
+     right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;;
+    /* give it dimensions */
+  /* bring your own prefixes */
+   
+
+	height:auto;
+	background-color:rgb(255,255,255);
+	padding-left:10px;
+	padding-right:10px;
+	padding-bottom:10px;
+	box-sizing:border-box
+}
+
+
+
+#topnav_menu
+{
+	background-color:#000000;
+	color:white;
+	margin:0;
+	padding:0;
+	height:auto;
+	width:100%;
+	
+	
+}
+#topnav_menu ul
+{
+	width:100%;
+	margin:0;
+	padding:10px 0;
+	height:auto;
+}
+#topnav_menu ul li
+{
+	
+	
+	color:white;
+	font-family: 'AbeatbyKai';
+	display:inline-block;
+	font-size:1.3em;
+	text-align:center;
+	width:15%;
+	margin:auto;
+	padding:0;
+	
+}
+
+
+.navbar-checkbox {
+    display: none;
+}
+
+#topnav_menu ul li {
+   
+    transition: visibility .25s linear;
+  }
+  
+  #topnav_menu  .navbar-handle {
+    
+    display: none;
+    cursor: pointer;
+    position: relative;
+	font-size:20px;
+	color:red;
+    padding: 0 0;
+    width: 100%;
+	z-index:20;
+ }
+ 
+@media (max-width: 750px) {
+	
+	#topnav_white_layer
+{
+	width:100%;
+}
+	#topnav_menu
+	{
+		height:60px;
+		transition:height .25s linear;
+	}
+
+
+#music_articles_container li
+{
+	width:48%;
+	
+	padding:4px;
+	
+	
+	margin:0px;
+	
+}
+
+
+footer #sm, article section, #home, .controls {
+		width:100%;
+	}
+	
+	#home #logo_container {
+	width:200px;
+	height:200px;
+	}
+	
+	#home h1 {
+	font-size:3em;
+	font-family: 'Adam';
+	margin:20px 0 0 0;
+	
+	
+}
+
+
+#home hr {
+	width:90%;
+	border:1px solid #fff;
+}
+
+
+.articles a {
+	width:100%;
+		
+}
+
+.article {
+
+	background-size:100% 100% cover;
+	background-position:top center;
+	
+}
+
+
+#home h2 {
+	font-size:2em;
+	font-family: 'Adam';
+	margin:10px 0 10px 0;
+	
+
+}
+	.controls .seek
+	{
+		width:90%;
+	}
+	
+	#topnav_menu  {
+    font-size: 1.2em;
+  }
+	
+    #topnav_menu ul {
+		max-height: 0px;
+		
+      padding-top:60px;
+      overflow: hidden;
+      margin: 0 3.5em 0 1em;
+	  transition: max-height .25s linear;
+    }
+\
+
+
+
+.col-nav
+{
+	float:none;
+	width:100%;
+}
+#topnav_menu ul
+{
+	text-align:center;
+}
+#topnav_menu ul li
+{
+  width:100%;
+  padding:4px 0;
+	
+}
+
+#topnav_menu ul li ul
+{
+	width:100%;
+}
+
+#topnav_menu  ul li ul li
+{
+	width:100%;
+}
+    #topnav_menu  li {
+      visibility: hidden;
+      display: inline-block;
+	  width:100%;
+      padding: 0.5em 0.6em;
+      border: none;
+    }
+
+
+#topnav_white_layer
+{
+	padding-left:0;
+	padding-right:0;
+	padding-bottom:0;
+	box-sizing:border-box
+}
+
+
+    #topnav_menu .navbar-handle {
+      display: block;
+	
+	  
+	 
+	  
+    }
+  
+  
+  
+	
+  input[type=checkbox]:checked ~  #topnav_menu ul {
+      max-height: 300px; 
+    }
+    
+    input[type=checkbox]:checked ~  #topnav_menu ul li {
+      display: inline-block;
+	  visibility:visible;
+	  
+    }
+    
+    input[type=checkbox]:checked ~ #topnav_menu
+	{
+		height:auto;
+	}
+
+
+
+
+/* Will scale based on font-size
+ Appears as 3 parallel horizontal bars */
+  #topnav_menu .navbar-handle {
+	 display:block;
+    position: absolute;
+    top: 0;
+   
+    z-index: 20; 
+	text-align:left;   
+  }
+	   #topnav_menu .navbar-handle span{
+    position: relative;
+    width: 35px;
+    height: 35px;
+    background: green;
+    -webkit-transition: all .3s ease;
+}
+	#topnav_menu .navbar-handle span:hover{
+    background: rgba(255,255,255,.6);
+}
+#topnav_menu .navbar-handle span:before,
+#topnav_menu .navbar-handle span:after{
+    content: '';
+    position: absolute;
+    width: 35px;
+    height: 0.6em;
+    top: 4px;
+    left: 0;
+    background: #70BE44;
+}
+#topnav_menu .navbar-handle span:after{
+    top: 14px;
+}
+
+
+#topnav_menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;}
+
+
+	
+}
+
